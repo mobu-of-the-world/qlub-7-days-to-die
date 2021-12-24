@@ -1,0 +1,10 @@
+version: '3'
+services:
+  qlub-7-days-to-die:
+    container_name: qlub-7-days-to-die
+    build:
+      context: .
+    volumes:
+      - 7-days-to-die:/7-days-to-die
+volumes:
+  7-days-to-die:
