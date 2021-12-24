@@ -1,1 +1,3 @@
-Hello
+```
+docker-compose up --build
+```
