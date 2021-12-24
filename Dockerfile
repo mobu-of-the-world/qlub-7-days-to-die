@@ -12,10 +12,11 @@ RUN \
       rm steamcmd_linux.tar.gz
 
 COPY install.steam /steam/install.steam
+COPY serverconfig.xml /7-days-to-die/serverconfig.xml
 
 RUN \
       mkdir /7-days-to-die &&\
       cd /steamcmd &&\
       ./steamcmd.sh +runscript /steam/install.steam
 
-ENTRYPOINT ["/bin/bash"]
+CMD ["/usr/bin/sleep", "3600"]
