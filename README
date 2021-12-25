@@ -1,5 +1,6 @@
 ```
-docker-compose --env-file .env up
+git pull --rebase
+docker-compose --env-file .env up --build
 
 # debug
 docker-compose --env-file .env run --rm --entrypoint='' qlub-7-days-to-die /bin/bash

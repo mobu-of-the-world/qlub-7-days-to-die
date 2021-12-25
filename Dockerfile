@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 RUN \
       apt-get update -qq -y &&\
-      apt-get install -y wget lib32gcc1
+      apt-get install -y wget lib32gcc1 less vim telnet
 
 RUN \
       mkdir -p /steamcmd &&\
