@@ -8,5 +8,7 @@ services:
       - "26900:26900"
     volumes:
       - 7-days-to-die:/7-days-to-die
+    environment:
+      - QLUB_SERVER_PASSWORD
 volumes:
   7-days-to-die:
