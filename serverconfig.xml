@@ -12,7 +12,7 @@
 	<!-- Networking -->
 	<property name="ServerPort"						value="26900"/>				<!-- Port you want the server to listen on. Keep it in the ranges 26900 to 26905 or 27015 to 27020 if you want PCs on the same LAN to find it as a LAN server. -->
 	<property name="ServerVisibility"				value="2"/>					<!-- Visibility of this server: 2 = public, 1 = only shown to friends, 0 = not listed. As you are never friend of a dedicated server setting this to "1" will only work when the first player connects manually by IP. -->
-	<property name="ServerDisabledNetworkProtocols"	value="SteamNetworking"/>	<!-- Networking protocols that should not be used. Separated by comma. Possible values: LiteNetLib, SteamNetworking. Dedicated servers should disable SteamNetworking if there is no NAT router in between your users and the server or when port-forwarding is set up correctly -->
+	<property name="ServerDisabledNetworkProtocols"	value=""/>	<!-- Networking protocols that should not be used. Separated by comma. Possible values: LiteNetLib, SteamNetworking. Dedicated servers should disable SteamNetworking if there is no NAT router in between your users and the server or when port-forwarding is set up correctly -->
 	<property name="ServerMaxWorldTransferSpeedKiBs" value="512"/>				<!-- Maximum (!) speed in kiB/s the world is transferred at to a client on first connect if it does not have the world yet. Maximum is about 1300 kiB/s, even if you set a higher value. -->
 
 	<!-- Slots -->
@@ -23,7 +23,7 @@
 	<property name="ServerAdminSlotsPermission"		value="0"/>					<!-- Required permission level to use the admin slots above -->
 
 	<!-- Admin interfaces -->
-	<property name="ControlPanelEnabled"			value="false"/>				<!-- Enable/Disable the web control panel -->
+	<property name="ControlPanelEnabled"			value="true"/>				<!-- Enable/Disable the web control panel -->
 	<property name="ControlPanelPort"				value="8080"/>				<!-- Port of the control panel webpage -->
 	<property name="ControlPanelPassword"			value="CHANGEME"/>			<!-- Password to gain entry to the control panel -->
 
