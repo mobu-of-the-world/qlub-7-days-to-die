@@ -6,6 +6,8 @@ services:
       context: .
     ports:
       - "26900:26900"
+      - "9090:8080"
+      - "8081:8081"
     volumes:
       - 7-days-to-die:/7-days-to-die
     environment:

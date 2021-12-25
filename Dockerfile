@@ -21,5 +21,7 @@ RUN \
 COPY serverconfig.xml /7-days-to-die/serverconfig.xml
 
 EXPOSE 26900
+EXPOSE 8080
+EXPOSE 8081
 
 CMD ["bash", "-c", "echo \"password: $QLUB_SERVER_PASSWORD\" && sed -i -e \"s/QLUB_SERVER_PASSWORD/$QLUB_SERVER_PASSWORD/g\" /7-days-to-die/serverconfig.xml && /7-days-to-die/startserver.sh -configfile=serverconfig.xml"]
