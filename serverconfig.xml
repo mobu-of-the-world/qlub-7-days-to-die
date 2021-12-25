@@ -29,7 +29,7 @@
 
 	<property name="TelnetEnabled"					value="true"/>				<!-- Enable/Disable the telnet -->
 	<property name="TelnetPort"						value="8081"/>				<!-- Port of the telnet server -->
-	<property name="TelnetPassword"					value=""/>					<!-- Password to gain entry to telnet interface. If no password is set the server will only listen on the local loopback interface -->
+	<property name="TelnetPassword"					value="password"/>					<!-- Password to gain entry to telnet interface. If no password is set the server will only listen on the local loopback interface -->
 	<property name="TelnetFailedLoginLimit"			value="10"/>				<!-- After this many wrong passwords from a single remote client the client will be blocked from connecting to the Telnet interface -->
 	<property name="TelnetFailedLoginsBlocktime"	value="10"/>				<!-- How long will the block persist (in seconds) -->
 

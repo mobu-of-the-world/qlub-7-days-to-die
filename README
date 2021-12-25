@@ -1,3 +1,6 @@
 ```
 docker-compose --env-file .env up
+
+# debug
+docker-compose --env-file .env run --rm --entrypoint='' qlub-7-days-to-die /bin/bash
 ```

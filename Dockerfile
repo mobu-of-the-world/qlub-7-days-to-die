@@ -19,6 +19,7 @@ RUN \
       ./steamcmd.sh +runscript /steam/install.steam
 
 COPY serverconfig.xml /7-days-to-die/serverconfig.xml
+COPY startserver.sh /7-days-to-die/startserver.sh
 
 EXPOSE 26900
 EXPOSE 8080
