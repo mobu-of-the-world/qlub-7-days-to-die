@@ -5,7 +5,7 @@
 	<!-- Server representation -->
 	<property name="ServerName"						value="qlub-7-days-to-die"/>		<!-- Whatever you want the name of the server to be. -->
 	<property name="ServerDescription"				value="qlub-7-days-to-die"/>	<!-- Whatever you want the server description to be, will be shown in the server browser. -->
-	<property name="ServerWebsiteURL"				value="https://github.com/mobu-of-the-world/qlub-7-days-to-die/settings/access"/>					<!-- Website URL for the server, will be shown in the serverbrowser as a clickable link -->
+	<property name="ServerWebsiteURL"				value="https://github.com/mobu-of-the-world/qlub-7-days-to-die"/>					<!-- Website URL for the server, will be shown in the serverbrowser as a clickable link -->
 	<property name="ServerPassword"					value="QLUB_SERVER_PASSWORD"/>					<!-- Password to gain entry to the server -->
 	<property name="ServerLoginConfirmationText"	value="" />					<!-- If set the user will see the message during joining the server and has to confirm it before continuing. For more complex changes to this window you can change the "serverjoinrulesdialog" window in XUi -->
 
