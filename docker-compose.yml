@@ -5,7 +5,7 @@ services:
     build:
       context: .
     ports:
-    - 26900
+      - "26900:26900"
     volumes:
       - 7-days-to-die:/7-days-to-die
 volumes:
