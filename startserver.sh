@@ -31,4 +31,4 @@ export LD_LIBRARY_PATH=.
 #export MALLOC_CHECK_=0
 
 # ./7DaysToDieServer.x86_64 -logfile $SERVERDIR/7DaysToDieServer_Data/output_log__`date +%Y-%m-%d__%H-%M-%S`.txt -quit -batchmode -nographics -dedicated $PARAMS
-./7DaysToDieServer.x86_64 -logfile $SERVERDIR/7DaysToDieServer_Data/output_log.txt -quit -batchmode -nographics -dedicated $PARAMS
+exec ./7DaysToDieServer.x86_64 -logfile $SERVERDIR/7DaysToDieServer_Data/output_log.txt -quit -batchmode -nographics -dedicated $PARAMS

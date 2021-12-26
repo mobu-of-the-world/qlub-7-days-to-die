@@ -23,7 +23,7 @@
 	<property name="ServerAdminSlotsPermission"		value="0"/>					<!-- Required permission level to use the admin slots above -->
 
 	<!-- Admin interfaces -->
-	<property name="ControlPanelEnabled"			value="true"/>				<!-- Enable/Disable the web control panel -->
+	<property name="ControlPanelEnabled"			value="false"/>				<!-- Enable/Disable the web control panel -->
 	<property name="ControlPanelPort"				value="8080"/>				<!-- Port of the control panel webpage -->
 	<property name="ControlPanelPassword"			value="CHANGEME"/>			<!-- Password to gain entry to the control panel -->
 
