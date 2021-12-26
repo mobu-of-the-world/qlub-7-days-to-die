@@ -12,7 +12,7 @@ end
 
 discord('Server restarted')
 
-IO.popen('tail -f /7-days-to-die/output.txt') do |io|
+IO.popen('tail -f /7-days-to-die/output_log.txt') do |io|
   loop do
     line = io.readline.chomp
     case line
