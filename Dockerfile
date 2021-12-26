@@ -2,7 +2,8 @@ FROM ubuntu:latest
 
 RUN \
       apt-get update -qq -y &&\
-      apt-get install -y wget lib32gcc1 less vim telnet
+      apt-get install -y wget lib32gcc1 &&\
+      apt-get install -y less vim telnet iproute2 # Just for debugging
 
 RUN \
       mkdir -p /steamcmd &&\
