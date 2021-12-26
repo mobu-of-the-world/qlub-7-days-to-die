@@ -13,5 +13,13 @@ services:
       - 7-days-to-die:/7-days-to-die
     environment:
       - QLUB_SERVER_PASSWORD
+  discord-notify-bot:
+    image: ruby
+    entrypoint: ["ruby", "/app/discord_notify_bot.rb"]
+    volumes:
+      - .:/app
+      - 7-days-to-die:/7-days-to-die
+    environment:
+      - DISCORD_WEBHOOK_URL
 volumes:
   7-days-to-die:
