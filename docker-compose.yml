@@ -11,6 +11,7 @@ services:
       - "8081:8081"
     volumes:
       - 7-days-to-die:/7-days-to-die
+      - 7-days-to-die-saved-data:/root/.local/share/7DaysToDie/
     environment:
       - QLUB_SERVER_PASSWORD
   discord-notify-bot:
@@ -23,3 +24,4 @@ services:
       - DISCORD_WEBHOOK_URL
 volumes:
   7-days-to-die:
+  7-days-to-die-saved-data:
