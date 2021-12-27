@@ -28,7 +28,7 @@ IO.popen('tail -f /7-days-to-die/output_log.txt') do |io|
     when %r(^[^ ]+ [^ ]+ INF GMSG: Player '(.+)' died$)
       # 2021-12-27T15:14:33 127013.793 INF GMSG: Player 'ujihisa' died
       discord("#{$1} died")
-    when %r(^[^ ]+ [^ ]+ INF Chat \([^)]+\): '(.+)': (.*)$)
+    when %r(^[^ ]+ [^ ]+ INF Chat \([^\)]+\): '(.+)': (.*)$)
       # 2021-12-27T16:42:13 132273.809 INF Chat (from 'Steam_76561198145251396', entity id '177', to 'Global'): 'pankona': ~A~J
       discord("#{$1}「$2」")
     end
