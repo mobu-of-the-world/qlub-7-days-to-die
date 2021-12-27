@@ -27,7 +27,7 @@ IO.popen('tail -f /7-days-to-die/output_log.txt') do |io|
       discord("@#{$1} joined the game. (Current players: #{current_players.join(', ')})")
     when %r(^[^ ]+ [^ ]+ INF GMSG: Player '(.+)' left the game$)
       # 2021-12-26T03:35:46 121.808 INF GMSG: Player 'ujihisa' left the game
-      current_players.delete($1)
+      current_players.delete("@#{$1}")
       discord("@#{$1} left the game. (Current players: #{current_players.join(', ')})")
     when %r(^[^ ]+ [^ ]+ INF GMSG: Player '(.+)' died$)
       # 2021-12-27T15:14:33 127013.793 INF GMSG: Player 'ujihisa' died
