@@ -35,6 +35,9 @@ IO.popen('tail -f /7-days-to-die/output_log.txt') do |io|
     when %r(^[^ ]+ [^ ]+ INF Chat \([^\)]+\): '(.+)': (.*)$)
       # 2021-12-27T16:42:13 132273.809 INF Chat (from 'Steam_76561198145251396', entity id '177', to 'Global'): 'pankona': ~A~J
       discord("@#{$1}「#{$2}」")
+    when %r(^[^ ]+ [^ ]+ INF (BloodMoon starting for day .*)$)
+      # 2021-12-29T07:32:37 96581.661 INF BloodMoon starting for day 7
+      discord("#{$1}")
     end
   end
 end
