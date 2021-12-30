@@ -10,6 +10,15 @@ def discord(msg)
   )
 end
 
+mention_mappings = {
+  'ujihisa' => '<@349891868273672194>',
+  'お豆腐ニキ' => '<@312616968882618368>',
+  'pankona' => '<@372183319372103680>',
+  'あさり食堂' => '<@630782140224765952>',
+  'tattotatto0806' => '<@761750299118665728>',
+  'yshr446' => '<@731154668033409046>',
+}
+
 discord('Server restarted')
 
 current_players = []
@@ -35,6 +44,11 @@ IO.popen('tail -f /7-days-to-die/output_log.txt') do |io|
     when %r(^[^ ]+ [^ ]+ INF Chat \([^\)]+\): '(.+)': (.*)$)
       # 2021-12-27T16:42:13 132273.809 INF Chat (from 'Steam_76561198145251396', entity id '177', to 'Global'): 'pankona': ~A~J
       discord("#{$1}「#{$2}」")
+
+      if /^!here\b/ =~ $2
+        targets = mention_mappings.select {|k, _| current_players.include?(k) }.values.shuffle.join(' ')
+        discord("#{targets} いま盛り上がってます。レッツ参加!")
+      end
     when %r(^[^ ]+ [^ ]+ INF (BloodMoon starting for day .*)$)
       # 2021-12-29T07:32:37 96581.661 INF BloodMoon starting for day 7
       discord("#{$1}")
