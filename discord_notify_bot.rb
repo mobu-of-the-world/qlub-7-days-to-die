@@ -43,7 +43,7 @@ IO.popen('tail -f /7-days-to-die/output_log.txt') do |io|
       discord("#{$1} died")
     when %r(^[^ ]+ [^ ]+ INF Chat \([^\)]+\): '(.+)': (.*)$)
       # 2021-12-27T16:42:13 132273.809 INF Chat (from 'Steam_76561198145251396', entity id '177', to 'Global'): 'pankona': ~A~J
-      (msg, who) = [$2, $1]
+      (who, msg) = [$1, $2]
       case msg
       when /^!here\b/
         targets = mention_mappings.reject {|k, _| current_players.include?(k) }.values.shuffle.join(' ')
