@@ -37,7 +37,11 @@ IO.popen('tail -f /7-days-to-die/output_log.txt') do |io|
     when %r(^[^ ]+ [^ ]+ INF GMSG: Player '(.+)' left the game$)
       # 2021-12-26T03:35:46 121.808 INF GMSG: Player 'ujihisa' left the game
       current_players.delete("#{$1}")
-      discord("#{$1} left the game. (Current players: #{current_players.join(', ')})")
+      if current_players.empty?
+        discord("#{$1} left the game. (No other current players)")
+      else
+        discord("#{$1} left the game. (Current players: #{current_players.join(', ')})")
+      end
     when %r(^[^ ]+ [^ ]+ INF GMSG: Player '(.+)' died$)
       # 2021-12-27T15:14:33 127013.793 INF GMSG: Player 'ujihisa' died
       discord("#{$1} died")
@@ -49,7 +53,7 @@ IO.popen('tail -f /7-days-to-die/output_log.txt') do |io|
         targets = mention_mappings.reject {|k, _| current_players.include?(k) }.values.shuffle.join(' ')
         discord("#{targets} いま盛り上がってます。レッツ参加!")
       when /^ .*/
-        discord("#{who}「#{msg}」")
+        discord("#{who}「#{msg.strip}」")
       end
     when %r(^[^ ]+ [^ ]+ INF (BloodMoon starting for day .*)$)
       # 2021-12-29T07:32:37 96581.661 INF BloodMoon starting for day 7
