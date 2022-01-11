@@ -52,7 +52,7 @@ IO.popen('tail -f /7-days-to-die/output_log.txt') do |io|
       when /^!here\b/
         targets = mention_mappings.reject {|k, _| current_players.include?(k) }.values.shuffle.join(' ')
         discord("#{targets} いま盛り上がってます。レッツ参加!")
-      when /^ .*/
+      when / /
         discord("#{who}「#{msg.strip}」")
       end
     when %r(^[^ ]+ [^ ]+ INF (BloodMoon starting for day .*)$)
