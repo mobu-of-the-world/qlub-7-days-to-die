@@ -48,12 +48,13 @@ IO.popen('tail -f /7-days-to-die/output_log.txt') do |io|
     when %r(^[^ ]+ [^ ]+ INF Chat \([^\)]+\): '(.+)': (.*)$)
       # 2021-12-27T16:42:13 132273.809 INF Chat (from 'Steam_76561198145251396', entity id '177', to 'Global'): 'pankona': ~A~J
       (who, msg) = [$1, $2]
+
+      discord("#{who}「#{msg.strip}」")
+
       case msg
       when /^!here\b/
         targets = mention_mappings.reject {|k, _| current_players.include?(k) }.values.shuffle.join(' ')
         discord("#{targets} いま盛り上がってます。レッツ参加!")
-      when / /
-        discord("#{who}「#{msg.strip}」")
       end
     when %r(^[^ ]+ [^ ]+ INF (BloodMoon starting for day .*)$)
       # 2021-12-29T07:32:37 96581.661 INF BloodMoon starting for day 7
