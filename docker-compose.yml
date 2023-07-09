@@ -14,6 +14,7 @@ services:
       - 7-days-to-die-saved-data:/root/.local/share/7DaysToDie/
     environment:
       - QLUB_SERVER_PASSWORD
+    restart: always
   discord-notify-bot:
     image: ruby
     entrypoint: ["ruby", "/app/discord_notify_bot.rb"]
@@ -22,6 +23,7 @@ services:
       - 7-days-to-die:/7-days-to-die
     environment:
       - DISCORD_WEBHOOK_URL
+    restart: always
 volumes:
   7-days-to-die:
   7-days-to-die-saved-data:
