@@ -19,7 +19,7 @@ RUN \
       cd /steamcmd &&\
       ./steamcmd.sh +runscript /steam/install.steam
 
-COPY serverconfig.xml /7-days-to-die/serverconfig.xml
+# COPY serverconfig.xml /7-days-to-die/serverconfig.xml
 COPY startserver.sh /7-days-to-die/startserver.sh
 
 EXPOSE 26900/TCP 26900-26903/udp
