@@ -24,10 +24,10 @@
 	<property name="ServerAdminSlotsPermission"		value="0"/>					<!-- Required permission level to use the admin slots above -->
 
 	<!-- Admin interfaces -->
-	<property name="WebDashboardEnabled"			value="false"/>				<!-- Enable/Disable the web control panel -->
-	<property name="WebDashboardPort"				value="8080"/>				<!-- Port of the control panel webpage -->
-	<property name="WebDashboardUrl"			value="CHANGEME"/>			<!-- Password to gain entry to the control panel -->
-	<property name="EnableMapRendering"			value="CHANGEME"/>			<!-- Password to gain entry to the control panel -->
+	<property name="WebDashboardEnabled"			value="false"/>
+	<property name="WebDashboardPort"				value="8080"/>
+	<property name="WebDashboardUrl"			value="CHANGEME"/>
+	<property name="EnableMapRendering"			value="true"/>
 
 	<property name="TelnetEnabled"					value="true"/>				<!-- Enable/Disable the telnet -->
 	<property name="TelnetPort"						value="8081"/>				<!-- Port of the telnet server -->
